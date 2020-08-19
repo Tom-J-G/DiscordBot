@@ -8,9 +8,7 @@ module.exports = {
 
             let collector = msg.createReactionCollector((reaction, user) => (user.id !== msg.author.id || user.id !== '733321444280238090')  && reaction.emoji.name == '👍', { time: 300000 });
             collector.on('collect', (reaction, user) => {
-                if (!user.bot && user.id !== msg.author.id) {
-                    msg.reply(`${user.username} is interested`);
-                }
+                if (!user.bot && user.id !== msg.author.id) msg.reply(`${user.username} is interested`);  
             });
 
             collector.on('end', collected => {
