@@ -1,0 +1,19 @@
+** COMMANDS::: **
+----------------------------------------
+Role:
+!roleAdd        ::: Add to 7ds Role
+!roleRemove     ::: Remove from 7ds role
+----------------------------------------
+DeathMatch:
+!red            ::: Red Demon
+!grey           ::: Grey Demon
+!howlex         ::: Howlex Demon
+----------------------------------------
+Twitter:
+!latestTweet    ::: Latest 7ds Tweet
+----------------------------------------
+Poll:
+!pollMulti      ::: Multi Poll
+!poll           ::: yes or no
+----------------------------------------
+
