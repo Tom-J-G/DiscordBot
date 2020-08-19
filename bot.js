@@ -12,13 +12,14 @@ const fs = require('fs');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
-// collect files
+// collect files with fs
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
   const command = require(`./commands/${file}`);
   client.commands.set(command.name, command);
 }
 
+//set up your twitter 
 const T = new Twit({
   consumer_key: process.env.CONSUMER_KEY,
   consumer_secret: process.env.CONSUMER_SECRET,
@@ -44,9 +45,9 @@ client.on('guildMemberAdd', member => {
   if(!channel) return;
   channel.send(`Welcome to the Server ${member}`)
 })
-// Event listener when a user sends a message in the chat.
-const prefix = "!";
 
+const prefix = "!";
+// Event listener when a user sends a message in the chat.
 client.on('message', msg => {
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
