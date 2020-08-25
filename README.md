@@ -1,4 +1,4 @@
-# Discrod Bot
+# Discord Bot
 
 Initial step of a Simple Discord bot for a game.
 
