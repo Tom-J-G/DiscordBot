@@ -3,7 +3,6 @@
 require('dotenv').config(); 
 
 // Import libraries
-const auth = require('./auth.json');
 const Discord = require('discord.js');
 const Twit = require('twit');
 const fs = require('fs');
